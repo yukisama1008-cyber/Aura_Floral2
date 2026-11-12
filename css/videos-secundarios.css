@@ -1,0 +1,87 @@
+/* videos-secundarios.css - Los 3 videos pequeños de la página Proceso
+   (van debajo del video grande, como "subtítulos" del video principal)
+
+   Están pensados para videos VERTICALES (grabados con el celular parado):
+   cada video se muestra con su forma real, sin recortarse. js/pagina-proceso.js
+   mide cada video y ajusta la caja; si alguno fuera horizontal, también se ve completo.
+
+   SI TUS VIDEOS son horizontales metidos en un lienzo vertical con franjas negras
+   (como el video grande), agrega la palabra "recortar" en html/proceso.html:
+        <div class="videos-secundarios recortar">
+   y se recortan las franjas para llenar el cuadro (16:9). */
+
+.subtitulo-videos {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 2.2rem 0 1.2rem;
+}
+
+.subtitulo-videos:before,
+.subtitulo-videos:after {
+  content: "✿";
+  color: var(--rosa);
+  font-size: 1rem;
+  margin: 0 .6rem;
+}
+
+/* Tarjetas angostas, centradas: en computador caben 3 en una fila */
+.videos-secundarios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 240px));
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 2.2rem;
+}
+
+.video-mini-caja {
+  margin: 0;
+  background: #fff;
+  border: 1px solid #f0d9de;
+  border-radius: 16px;
+  padding: .6rem;
+  transition: transform .3s, box-shadow .3s;
+}
+
+.video-mini-caja:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 26px #b5546f22;
+}
+
+/* Video vertical (9:16) por defecto; contain = nunca se recorta */
+.video-mini {
+  aspect-ratio: 9 / 16;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #000;
+}
+
+.video-mini-caja figcaption {
+  padding: .6rem .3rem .2rem;
+  text-align: center;
+}
+
+.video-mini-caja figcaption b {
+  display: block;
+  color: var(--rosa2);
+}
+
+.video-mini-caja figcaption span {
+  font-size: .9rem;
+}
+
+/* ---- Modo "recortar": para videos horizontales con franjas negras metidas ---- */
+.videos-secundarios.recortar {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.videos-secundarios.recortar .video-mini {
+  aspect-ratio: 16 / 9 !important;
+  object-fit: cover;
+}
+
+/* Navegadores antiguos sin "aspect-ratio": altura fija */
+@supports not (aspect-ratio: 1 / 1) {
+  .video-mini {
+    height: 420px;
+  }
+}

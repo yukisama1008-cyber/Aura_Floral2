@@ -1,0 +1,74 @@
+/* slider.css - Diapositivas de la página de inicio (las mueve js/slider.js) */
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(100deg, #fff 20%, var(--suave));
+}
+
+.slide {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  padding: 2.5rem 6vw;
+  min-height: 430px;
+}
+
+.slide.on {
+  display: grid;
+}
+
+.slide h1 {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+}
+
+.slide h1 small {
+  display: block;
+  font: 500 1.1rem 'Nunito';
+  letter-spacing: .4em;
+  margin: .3rem 0 1rem;
+}
+
+.slide p {
+  margin: .8rem 0 1.4rem;
+  font-size: 1.15rem;
+  max-width: 30em;
+}
+
+.slide img {
+  border-radius: 24px;
+  max-height: 380px;
+  margin: auto;
+  box-shadow: 0 18px 40px #b5546f33;
+}
+
+/* Puntitos para cambiar de diapositiva */
+.dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 2;
+}
+
+.dots i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d9aab7;
+  cursor: pointer;
+  transition: transform .3s, background .3s;
+}
+
+.dots i:hover {
+  transform: scale(1.4);
+  background: var(--rosa2);
+}
+
+.dots i.on {
+  background: var(--rosa);
+  transform: scale(1.3);
+}

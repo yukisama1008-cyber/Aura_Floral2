@@ -1,0 +1,13 @@
+/* variables.css - Colores de la marca (paleta tomada del boceto)
+   Cambia un color aquí y cambia en todo el sitio. */
+
+:root {
+  color-scheme: light;      /* evita que el modo oscuro del navegador cambie los colores del formulario */
+  --rosa: #b5546f;
+  --rosa2: #9a3f5a;
+  --rosa-oscuro: #7d2f48;   /* nuevo: color más oscuro para los hover */
+  --suave: #fbe6ea;
+  --crema: #fffaf8;
+  --tinta: #2b2326;
+  --oscuro: #2a2a2d;
+}

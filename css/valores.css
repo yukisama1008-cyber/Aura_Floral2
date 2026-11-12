@@ -1,0 +1,15 @@
+/* valores.css - Franja de valores (Hecho a mano, Materiales sostenibles...) */
+
+.valores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  text-align: center;
+  padding: 1.8rem 6vw;
+  background: var(--suave);
+}
+
+.valores span {
+  font-size: 2rem;
+  display: block;
+}

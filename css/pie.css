@@ -1,0 +1,29 @@
+/* pie.css - Pie de página (lo crea js/pie.js) */
+
+.pie {
+  background: var(--oscuro);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+}
+
+.pie nav {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.pie p {
+  margin-bottom: .4rem;
+}
+
+.pie a {
+  text-decoration: none;
+}
+
+.pie a:hover {
+  color: #f2a8bc;
+}

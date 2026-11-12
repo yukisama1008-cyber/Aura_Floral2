@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width,initial-scale=1" name="viewport"/>
+    <title>
+      Carrito | Aura floral artesanía
+    </title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&amp;family=Playfair+Display:wght@600&amp;display=swap" rel="stylesheet"/>
+    <link href="../css/estilo.css" rel="stylesheet"/>
+  </head>
+  <body data-page="carrito">
+    <!-- CONTENIDO PRINCIPAL DE LA PÁGINA -->
+    <main class="wrap">
+      <h2 class="titulo">
+        <span data-en="Shopping Cart">
+          Carrito de compras
+        </span>
+      </h2>
+      <div class="tw">
+        <!-- TABLA -->
+        <table>
+          <thead>
+            <tr>
+              <th>
+                <span data-en="Product">
+                  Producto
+                </span>
+              </th>
+              <th>
+                <span data-en="Price">
+                  Precio
+                </span>
+              </th>
+              <th>
+                <span data-en="Quantity">
+                  Cantidad
+                </span>
+              </th>
+              <th>
+                Subtotal
+              </th>
+              <th>
+              </th>
+            </tr>
+          </thead>
+          <tbody id="items">
+          </tbody>
+        </table>
+      </div>
+      <p style="text-align:right;font-size:1.4rem;margin:1rem 0">
+        <b>
+          Total:
+          <span id="total">
+            $0
+          </span>
+        </b>
+      </p>
+      <!-- Correo donde se enviará la confirmación de la compra -->
+      <div style="text-align:right;margin:1rem 0">
+        <label for="correo-compra" style="display:block;font-weight:700;margin-bottom:.3rem">
+          <span data-en="Your email (we will send your purchase confirmation here)">
+            Tu correo (aquí te enviaremos la confirmación de tu compra)
+          </span>
+        </label>
+        <input data-pen="Your email" id="correo-compra" placeholder="Tu correo" required="" style="width:100%;max-width:380px;padding:.7rem 1rem;border:1px solid var(--rosa);border-radius:999px;font:inherit" type="email"/>
+        <div class="msg" id="correo-compra-msg" role="alert" style="margin-top:.5rem">
+        </div>
+      </div>
+      <p style="text-align:right">
+        <a class="btn sm" data-en="Keep shopping" href="productos.html" style="background:#fff;color:var(--rosa2);border:1px solid var(--rosa)">
+          Seguir comprando
+        </a>
+        <button class="btn" data-en="Buy Now" id="buy">
+          Comprar ahora
+        </button>
+      </p>
+    </main>
+    <!-- SCRIPTS: cada archivo hace una sola cosa y el orden importa (ver LEEME.txt) -->
+    <!-- Datos -->
+    <script src="../js/datos-contacto.js"></script>
+    <script src="../js/productos.js"></script>
+    <!-- Herramientas -->
+    <script src="../js/utilidades.js"></script>
+    <script src="../js/idioma.js"></script>
+    <script src="../js/avisos.js"></script>
+    <script src="../js/carrito.js"></script>
+    <!-- Encabezado, menú y pie de página -->
+    <script src="../js/menu.js"></script>
+    <script src="../js/pie.js"></script>
+    <!-- Esta página -->
+    <script src="../js/pagina-carrito.js"></script>
+    <!-- Efectos y arranque -->
+    <script src="../js/efectos-aparicion.js"></script>
+    <script src="../js/efectos-petalos.js"></script>
+    <script src="../js/efectos-scroll.js"></script>
+    <script src="../js/arranque.js"></script>
+  </body>
+</html>

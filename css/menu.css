@@ -1,0 +1,148 @@
+/* menu.css - Menú de pestañas con submenús desplegables
+
+   Estructura (la crea js/menu.js):
+   nav.menu > ul > li > a.tab
+   li.tiene-sub > a.tab + ul.sub > li > a
+   Colores: en reposo rosa muy suave; al pasar el mouse se OSCURECE. */
+
+.menu {
+  margin-left: auto;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu > ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem .5rem;
+}
+
+.menu li {
+  position: relative;
+}
+
+/* ---- Pestaña principal ---- */
+.tab {
+  display: flex;
+  align-items: center;
+  gap: .35rem;
+  text-decoration: none;
+  font-size: .95rem;
+  font-weight: 700;
+  padding: .4rem 1rem;
+  border-radius: 999px;
+  background: var(--suave);
+  color: var(--tinta);
+  transition: background .3s, color .3s, transform .3s, box-shadow .3s;
+}
+
+/* Mouse encima (o el submenú abierto): color más oscuro */
+.tab:hover,
+li:hover > .tab,
+li:focus-within > .tab {
+  background: var(--rosa2);
+  color: #fff;
+}
+
+/* Página en la que estás */
+.tab.on {
+  background: var(--rosa);
+  color: #fff;
+}
+
+.tab.on:hover,
+li:hover > .tab.on {
+  background: var(--rosa-oscuro);
+}
+
+.flecha {
+  font-style: normal;
+  font-size: .75rem;
+  transition: transform .3s;
+}
+
+/* ---- Submenú desplegable ---- */
+.sub {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  min-width: 200px;
+  margin: 0;
+  padding: .5rem;
+  background: var(--suave);
+  border: 1px solid #f0d9de;
+  border-radius: 14px;
+  box-shadow: 0 14px 30px #b5546f33;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, 10px);
+  transition: opacity .3s, transform .3s, visibility .3s;
+  z-index: 30;
+}
+
+/* Puente invisible para que el submenú no se cierre al bajar el mouse */
+.sub::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -12px;
+  height: 12px;
+}
+
+.tiene-sub:hover > .sub,
+.tiene-sub:focus-within > .sub,
+.tiene-sub.abierto > .sub {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+.tiene-sub:hover .flecha,
+.tiene-sub.abierto .flecha {
+  transform: rotate(180deg);
+}
+
+.sub a {
+  display: block;
+  padding: .5rem .9rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: .92rem;
+  white-space: nowrap;
+  transition: background .25s, color .25s, padding-left .25s;
+}
+
+.sub a:hover {
+  background: var(--rosa2);
+  color: #fff;
+  padding-left: 1.3rem;
+}
+
+.sub a.on {
+  background: var(--rosa);
+  color: #fff;
+}
+
+/* ---- Botón hamburguesa (solo se ve en celular) ---- */
+.menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  background: var(--suave);
+  border: 1px solid #e3c3cb;
+  border-radius: 12px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: background .25s, color .25s;
+}
+
+.menu-toggle:hover {
+  background: var(--rosa2);
+  color: #fff;
+}

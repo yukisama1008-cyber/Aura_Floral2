@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width,initial-scale=1" name="viewport"/>
+    <title>
+      Contacto | Aura floral artesanía
+    </title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&amp;family=Playfair+Display:wght@600&amp;display=swap" rel="stylesheet"/>
+    <link href="../css/estilo.css" rel="stylesheet"/>
+  </head>
+  <body data-page="contacto">
+    <!-- CONTENIDO PRINCIPAL DE LA PÁGINA -->
+    <main class="wrap">
+      <h2 class="titulo">
+        <span data-en="Contact Us">
+          Contáctanos
+        </span>
+      </h2>
+      <div class="dos" style="align-items:start">
+        <div>
+          <p>
+            <span data-en="We would love to hear from you!">
+              ¡Nos encantará saber de ti!
+            </span>
+          </p>
+          <br/>
+          <!-- Tarjetas de contacto: las dibuja js/pagina-contacto.js con los datos de js/datos-contacto.js -->
+          <div class="contacto-lista" id="datos-contacto">
+          </div>
+        </div>
+        <!-- FORMULARIO -->
+        <form class="f" id="fc" novalidate="">
+          <div>
+            <label for="n">
+              <span data-en="Name">
+                Nombre
+              </span>
+            </label>
+            <input data-pen="Your name" id="n" name="nombre" placeholder="Tu nombre" required=""/>
+          </div>
+          <div>
+            <label for="c">
+              <span data-en="Email">
+                Correo electrónico
+              </span>
+            </label>
+            <input data-pen="Your email" id="c" name="correo" placeholder="Tu correo" required="" type="email"/>
+          </div>
+          <div>
+            <label for="t">
+              <span data-en="Phone">
+                Teléfono
+              </span>
+            </label>
+            <input id="t" name="telefono" type="tel"/>
+          </div>
+          <div>
+            <label for="prod">
+              <span data-en="Product of interest">
+                Producto de interés
+              </span>
+            </label>
+            <select id="prod" name="producto">
+            </select>
+          </div>
+          <div>
+            <label for="q">
+              <span data-en="Quantity">
+                Cantidad
+              </span>
+            </label>
+            <input id="q" min="1" name="cantidad" type="number" value="1"/>
+          </div>
+          <div>
+            <label for="m">
+              <span data-en="Message">
+                Mensaje
+              </span>
+            </label>
+            <textarea data-pen="Write your message..." id="m" name="mensaje" placeholder="Escribe tu mensaje..." required="" rows="4"></textarea>
+          </div>
+          <div class="msg" id="fm" role="alert">
+          </div>
+          <button class="btn" id="fc-enviar" type="submit">
+            ENVIAR / SEND
+          </button>
+          <button class="btn claro" id="fc-whatsapp" type="button">
+            📱 <span data-en="Send via WhatsApp">Enviar por WhatsApp</span>
+          </button>
+        </form>
+      </div>
+    </main>
+    <!-- SCRIPTS: cada archivo hace una sola cosa y el orden importa (ver LEEME.txt) -->
+    <!-- Datos -->
+    <script src="../js/datos-contacto.js"></script>
+    <script src="../js/productos.js"></script>
+    <!-- Herramientas -->
+    <script src="../js/utilidades.js"></script>
+    <script src="../js/idioma.js"></script>
+    <script src="../js/avisos.js"></script>
+    <script src="../js/carrito.js"></script>
+    <!-- Encabezado, menú y pie de página -->
+    <script src="../js/menu.js"></script>
+    <script src="../js/pie.js"></script>
+    <!-- Esta página -->
+    <script src="../js/pagina-contacto.js"></script>
+    <!-- Efectos y arranque -->
+    <script src="../js/efectos-aparicion.js"></script>
+    <script src="../js/efectos-petalos.js"></script>
+    <script src="../js/efectos-scroll.js"></script>
+    <script src="../js/arranque.js"></script>
+  </body>
+</html>

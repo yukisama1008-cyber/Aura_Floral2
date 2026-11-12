@@ -1,0 +1,39 @@
+/* mision-vision.css - Páginas Misión, Visión y Gracias (fondo grande y centrado) */
+
+.mv {
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 3rem 1.2rem;
+  background: linear-gradient(135deg, var(--suave), #fff 60%, #f4e6f6);
+  position: relative;
+  overflow: hidden;
+}
+
+.mv:before {
+  content: "✿";
+  position: absolute;
+  font-size: 22rem;
+  color: #b5546f14;
+  right: -3rem;
+  top: -4rem;
+}
+
+.mv > div {
+  max-width: 720px;
+  position: relative;
+  z-index: 1;
+}
+
+.mv p {
+  font-size: 1.25rem;
+  margin: 1rem 0;
+}
+
+.mv .en {
+  font-style: italic;
+  color: var(--rosa2);
+  border-top: 1px solid #e3c3cb;
+  padding-top: 1rem;
+}

@@ -1,0 +1,37 @@
+/* video.css - Video de la página Proceso
+
+   Caja de 16:9 con esquinas redondeadas (el estilo de siempre).
+
+   object-fit: cover  -> la imagen LLENA toda la caja negra. Si el video trae
+                         franjas negras metidas en el archivo (por ejemplo, un
+                         video exportado en formato vertical), se recortan.
+   Si algún día pones un video vertical de verdad (grabado con el celular
+   parado) y no quieres que se recorte, cambia "cover" por "contain". */
+
+.video-caja {
+  position: relative;
+}
+
+.video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  background: #000;
+  border-radius: 14px;
+}
+
+/* Botón "Pantalla completa" sobre el video (esquina superior derecha) */
+.video-caja .boton-video {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+}
+
+/* Navegadores antiguos sin "aspect-ratio": altura fija para el video */
+@supports not (aspect-ratio: 1 / 1) {
+  .video {
+    height: 420px;
+  }
+}

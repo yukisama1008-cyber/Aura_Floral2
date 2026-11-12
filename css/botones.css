@@ -1,0 +1,42 @@
+/* botones.css - Botones de acción (.btn) */
+
+.btn {
+  display: inline-block;
+  background: var(--rosa);
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+  padding: .65rem 1.6rem;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background .2s, transform .2s, box-shadow .2s;
+}
+
+.btn:hover {
+  background: var(--rosa-oscuro);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px #7d2f4833;
+}
+
+.btn.sm {
+  padding: .4rem 1rem;
+  font-size: .9rem;
+}
+
+/* Botón claro (borde rosa, fondo blanco): para acciones secundarias */
+.btn.claro {
+  background: #fff;
+  color: var(--rosa2);
+  border: 1px solid var(--rosa);
+}
+
+.btn.claro:hover {
+  background: var(--suave);
+  color: var(--rosa-oscuro);
+}
+
+.btn:disabled {
+  opacity: .6;
+  cursor: wait;
+}

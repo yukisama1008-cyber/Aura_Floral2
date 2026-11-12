@@ -1,0 +1,10 @@
+/* banner.css - Franja rosada que va arriba de todo */
+
+.banner {
+  background: var(--rosa);
+  color: #fff;
+  text-align: center;
+  padding: .5rem;
+  font-size: .95rem;
+  overflow: hidden;
+}

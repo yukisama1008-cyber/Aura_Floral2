@@ -1,0 +1,49 @@
+/* contacto.css - Tarjetas con los datos de contacto (teléfono, correo, redes)
+   Las crea js/pagina-contacto.js con los datos de js/datos-contacto.js */
+
+.contacto-lista {
+  display: grid;
+  gap: .8rem;
+  margin-top: 1rem;
+}
+
+.dato {
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+  padding: .8rem 1rem;
+  background: #fff;
+  border: 1px solid #f0d9de;
+  border-radius: 14px;
+  text-decoration: none;
+  transition: transform .3s, box-shadow .3s, background .3s, border-color .3s;
+}
+
+a.dato:hover {
+  background: var(--suave);
+  border-color: var(--rosa);
+  transform: translateX(6px);
+  box-shadow: 0 10px 22px #b5546f22;
+}
+
+.dato-icono {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--suave);
+  font-size: 1.4rem;
+}
+
+.dato b {
+  display: block;
+  font-size: .85rem;
+  color: var(--rosa2);
+}
+
+.dato small {
+  font-size: 1rem;
+  word-break: break-all;
+}

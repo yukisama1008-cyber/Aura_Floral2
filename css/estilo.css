@@ -1,0 +1,53 @@
+/* =====================================================================
+   estilo.css - ÍNDICE de la hoja de estilos de Aura floral artesanía
+
+   Este archivo no tiene estilos propios: solo importa, en orden, los
+   archivos de la carpeta css/. Cada archivo se encarga de UNA cosa.
+   Las páginas HTML solo enlazan este archivo.
+
+   variables.css       colores de la marca
+   base.css            fuentes, fondo, títulos, imágenes y enlaces
+   banner.css          franja rosada de arriba
+   encabezado.css      barra superior, logo y botones (idioma, sesión, carrito)
+   menu.css            menú de pestañas y submenús desplegables
+   botones.css         botones
+   slider.css          diapositivas de la página de inicio
+   valores.css         franja de valores (Hecho a mano, etc.)
+   productos.css       contenedor, títulos y tarjetas de productos
+   nosotros.css        sección Nosotros y equipo
+   mision-vision.css   páginas Misión, Visión y Gracias
+   formularios.css     formularios y mensajes
+   contacto.css        tarjetas de datos de contacto
+   tablas.css          catálogo, carrito y proceso
+   video.css           video principal (grande) de Proceso
+   videos-secundarios.css  los 3 videos pequeños de Proceso
+   aviso.css           aviso emergente del carrito
+   pie.css             pie de página
+   petalos.css         pétalos que caen
+   efectos-scroll.css  barra de progreso y botón "subir"
+   animaciones.css     TODAS las animaciones del sitio
+   responsive.css      celulares y pantallas pequeñas
+   ===================================================================== */
+
+@import url("variables.css");
+@import url("base.css");
+@import url("banner.css");
+@import url("encabezado.css");
+@import url("menu.css");
+@import url("botones.css");
+@import url("slider.css");
+@import url("valores.css");
+@import url("productos.css");
+@import url("nosotros.css");
+@import url("mision-vision.css");
+@import url("formularios.css");
+@import url("contacto.css");
+@import url("tablas.css");
+@import url("video.css");
+@import url("videos-secundarios.css");
+@import url("aviso.css");
+@import url("pie.css");
+@import url("petalos.css");
+@import url("efectos-scroll.css");
+@import url("animaciones.css");
+@import url("responsive.css");

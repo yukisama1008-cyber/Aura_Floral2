@@ -1,0 +1,24 @@
+/* petalos.css - Pétalos que caen suavemente en el slider y en Misión/Visión/Gracias
+   (los crea js/efectos-petalos.js) */
+
+.petalo {
+  position: absolute;
+  top: -30px;
+  pointer-events: none;
+  opacity: .55;
+  z-index: 0;
+  animation: cae linear infinite;
+}
+
+/* El contenido va por encima de los pétalos */
+.slide,
+.mv > div {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes cae {
+  to {
+    transform: translate(40px, var(--caida, 500px)) rotate(360deg);
+  }
+}

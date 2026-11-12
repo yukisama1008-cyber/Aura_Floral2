@@ -1,0 +1,47 @@
+/* tablas.css - Tablas del catálogo, carrito y proceso */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+th {
+  background: var(--rosa);
+  color: #fff;
+}
+
+th,
+td {
+  padding: .6rem;
+  text-align: left;
+  border-bottom: 1px solid #f0e1e5;
+  vertical-align: middle;
+}
+
+td img {
+  width: 90px;
+  border-radius: 8px;
+}
+
+.tw {
+  overflow-x: auto;
+}
+
+/* Botones − y + de la cantidad en el carrito */
+.q button {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background .25s, color .25s;
+}
+
+.q button:hover {
+  background: var(--rosa2);
+  color: #fff;
+}

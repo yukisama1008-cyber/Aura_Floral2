@@ -1,0 +1,36 @@
+/* diagnostico.css - Estilos de la página de diagnóstico (html/diagnostico.html) */
+
+.diag-resumen {
+  padding: 1rem 1.2rem;
+  border-radius: 14px;
+  font-weight: 700;
+  margin: 1rem 0 1.5rem;
+  background: var(--suave);
+}
+
+.diag-resumen.bien { background: #e6f4ea; }
+.diag-resumen.aviso { background: #fff4d6; }
+.diag-resumen.mal { background: #fde4e4; }
+
+.diag-grupo th {
+  text-align: left;
+  font-size: 1.05rem;
+}
+
+.diag-estado {
+  width: 2.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.diag-detalle {
+  color: #6a5a5f;
+  font-size: .9rem;
+}
+
+.diag-acciones {
+  display: flex;
+  gap: .8rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}

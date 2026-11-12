@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width,initial-scale=1" name="viewport"/>
+    <title>
+      Iniciar sesión | Aura floral artesanía
+    </title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&amp;family=Playfair+Display:wght@600&amp;display=swap" rel="stylesheet"/>
+    <link href="../css/estilo.css" rel="stylesheet"/>
+  </head>
+  <body data-page="login">
+    <!-- CONTENIDO PRINCIPAL DE LA PÁGINA -->
+    <main class="wrap">
+      <div style="max-width:420px;margin:auto">
+        <h2 class="titulo" id="lt">
+          Iniciar sesión
+        </h2>
+        <!-- FORMULARIO -->
+        <form class="f" id="fl">
+          <div class="solo-reg">
+            <label for="nom">
+              <span data-en="Name">
+                Nombre
+              </span>
+            </label>
+            <input id="nom" name="nombre"/>
+          </div>
+          <div>
+            <label for="co">
+              <span data-en="Email">
+                Correo electrónico
+              </span>
+            </label>
+            <input id="co" name="correo" required="" type="email"/>
+          </div>
+          <div>
+            <label for="cl">
+              <span data-en="Password">
+                Contraseña
+              </span>
+            </label>
+            <input id="cl" minlength="4" name="clave" required="" type="password"/>
+          </div>
+          <div class="msg" id="lm" role="alert">
+          </div>
+          <button class="btn" type="submit">
+            OK
+          </button>
+          <button class="btn sm" id="sw" style="background:#fff;color:var(--rosa2);border:1px solid var(--rosa)" type="button">
+          </button>
+        </form>
+      </div>
+    </main>
+    <!-- SCRIPTS: cada archivo hace una sola cosa y el orden importa (ver LEEME.txt) -->
+    <!-- Datos -->
+    <script src="../js/datos-contacto.js"></script>
+    <script src="../js/productos.js"></script>
+    <!-- Herramientas -->
+    <script src="../js/utilidades.js"></script>
+    <script src="../js/idioma.js"></script>
+    <script src="../js/avisos.js"></script>
+    <script src="../js/carrito.js"></script>
+    <!-- Encabezado, menú y pie de página -->
+    <script src="../js/menu.js"></script>
+    <script src="../js/pie.js"></script>
+    <!-- Esta página -->
+    <script src="../js/pagina-login.js"></script>
+    <!-- Efectos y arranque -->
+    <script src="../js/efectos-aparicion.js"></script>
+    <script src="../js/efectos-petalos.js"></script>
+    <script src="../js/efectos-scroll.js"></script>
+    <script src="../js/arranque.js"></script>
+  </body>
+</html>

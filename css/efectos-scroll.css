@@ -1,0 +1,61 @@
+/* efectos-scroll.css - Barra de progreso, encabezado que se encoge y botón "subir"
+   (los controla js/efectos-scroll.js) */
+
+/* Barra rosada que crece mientras bajas por la página */
+.progreso {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0;
+  background: linear-gradient(90deg, var(--rosa), #f2a8bc);
+  z-index: 60;
+  transition: width .1s linear;
+}
+
+/* Encabezado más compacto al bajar */
+.top {
+  transition: padding .3s, box-shadow .3s;
+}
+
+.top.scrolled {
+  padding-top: .2rem;
+  padding-bottom: .2rem;
+  box-shadow: 0 6px 20px #b5546f22;
+}
+
+.top.scrolled .logo {
+  width: 46px;
+  height: 46px;
+}
+
+/* Botón para volver arriba */
+.subir {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  width: 46px;
+  height: 46px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--rosa);
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity .3s, transform .3s, visibility .3s, background .25s;
+  z-index: 40;
+}
+
+.subir.on {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.subir:hover {
+  background: var(--rosa-oscuro);
+  transform: translateY(-4px);
+}

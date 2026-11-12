@@ -1,0 +1,45 @@
+/* base.css - Estilos base: fuentes, fondo, títulos, imágenes y enlaces */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Deja espacio para el encabezado fijo cuando se salta a un #ancla */
+[id] {
+  scroll-margin-top: 100px;
+}
+
+body {
+  font-family: 'Nunito', system-ui, sans-serif;
+  background: var(--crema);
+  color: var(--tinta);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+/* Accesibilidad: contorno visible al navegar con el teclado */
+:focus-visible {
+  outline: 3px solid #f2a8bc;
+  outline-offset: 2px;
+}

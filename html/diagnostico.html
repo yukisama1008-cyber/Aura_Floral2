@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Diagnóstico del sitio | Aura floral artesanía</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/diagnostico.css">
+  </head>
+  <body data-page="diagnostico">
+    <!-- Esta página revisa si el sitio y el navegador funcionan bien en ESTE computador.
+         Ábrela en cada computador y navegador donde quieras probar el sitio. -->
+    <main class="wrap">
+      <h1 class="titulo">Diagnóstico del sitio</h1>
+      <p>
+        Esta página revisa, en este computador y en este navegador, que todos los archivos del sitio
+        carguen y que el navegador entienda lo que el sitio necesita. Ábrela en cada navegador
+        (Chrome, Edge, Opera, Firefox...) y mira si todo sale con ✅.
+      </p>
+
+      <div class="diag-resumen" id="diag-resumen">Revisando...</div>
+
+      <div class="diag-acciones">
+        <button class="btn" id="diag-copiar" type="button">Copiar resultado</button>
+        <button class="btn claro" id="diag-repetir" type="button">Revisar otra vez</button>
+        <a class="btn claro" href="inicio.html">Ir al sitio</a>
+      </div>
+
+      <div class="tw">
+        <table id="diag-tabla"></table>
+      </div>
+
+      <p><small>✅ funciona &nbsp; ⚠️ aviso (el sitio sigue funcionando) &nbsp; ❌ problema que hay que arreglar</small></p>
+    </main>
+
+    <script src="../js/diagnostico.js"></script>
+  </body>
+</html>
